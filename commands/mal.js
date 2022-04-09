@@ -11,7 +11,7 @@ let i=0;
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('mal')
-        .setDescription('Say hi to the bot'),
+        .setDescription('Send anime news'),
         async execute(message, args) {
             let feed = await parser.parseURL('https://www.myanimelist.net/rss/news.xml');
             function formatDate(date) {
