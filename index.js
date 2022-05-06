@@ -22,7 +22,7 @@ client.once('ready', () => {
 	console.log('Ready!');
 });
 
-client.on('message', message => {
+client.on('messageCreate', message => {
   if (!message.content.startsWith(prefix) || message.author.bot) {
     return;
   }
@@ -44,6 +44,10 @@ client.on('message', message => {
   const author = message.author.tag;
   const server = message.guild.name;
   console.log(`User ${author} from server ${server} said: ${message.content}`);
-});
+  console.log(args + ' ' + commandName);
+
+}
+);
 
 client.login(token);
+
